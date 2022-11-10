@@ -1,12 +1,13 @@
 let apiQuotes = [];
 
-// Show New Quote
+/** Picks a random quote from apiQuotes array */
 function newQuote() {
-    
-}
+    const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+    console.log(quote);
+};
 
 
-// Get Quotes From API
+/** Gets Quotes From API */
 async function getQuotes() {
     const apiUrl = 'https://type.fit/api/quotes';
     try {
