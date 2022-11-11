@@ -7,6 +7,11 @@ const newQuoteBtn = document.getElementById('new-quote');
 
 let apiQuotes = [];
 
+// Event listeners
+twitterBtn.addEventListener('click', () => {
+    tweetQuote();
+});
+
 /** Picks a random quote from apiQuotes array and displays it in the browser*/
 function newQuote() {
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
@@ -38,6 +43,12 @@ async function getQuotes() {
     };
 };
 
+
+/** Tweets Quote */
+function tweetQuote() {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`;
+    window.open(twitterUrl, '_blank');
+}
 
 // On load
 getQuotes();
