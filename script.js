@@ -10,14 +10,14 @@ let apiQuotes = [];
 
 /** Shows the user that the page is loading */
 function loading() {
-    loader.hidden = false
-    quoteContainer.hidden = true
-};
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
 
 /** Hides the loading wheel and dispays the quote when finished loading */
 function complete() {
-    quoteContainer.hidden = false
-    loader.hidden = true
+    quoteContainer.hidden = false;
+    loader.hidden = true;
 }
 
 /** Picks a random quote from apiQuotes array and displays it in the browser*/
@@ -29,7 +29,7 @@ function newQuote() {
         authorText.textContent = "Unknown";
     } else {
         authorText.textContent = quote.author;
-    };
+    }
     // Check Quote length to determine the styling
     if (quote.text.length > 120) {
         quoteText.classList.add('long-quote');
@@ -39,7 +39,7 @@ function newQuote() {
     // Set Quote, hide loader
     quoteText.textContent = quote.text;
     complete();
-};
+}
 
 
 /** Gets Quotes From API */
@@ -52,8 +52,8 @@ async function getQuotes() {
         newQuote();
     } catch (error) {
 
-    };
-};
+    }
+}
 
 
 /** Tweets Quote */
