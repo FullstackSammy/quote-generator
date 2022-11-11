@@ -20,16 +20,17 @@ Create a Quote Generator website using JavaScript, that allows users to get read
 - A share button to share a quote to Twitter
 - Loading Wheel at the start of loading and while loading a new quote
 
-    ![image of loading wheel](/assets/images/loader.jpg)
-
-
 ## Testing
 I checked my code on the on the following sites:
 - My CSS code on [Jigsaw](https://jigsaw.w3.org/css-validator/#validate_by_input) and it passed
 - My HTML code on [W3](https://validator.w3.org/) and it passed
 - My JavaScript code on [BeautifyTools](https://beautifytools.com/javascript-validator.php) and it passed
 
+
 When you first load the page, you might see the loading wheel for a split second before it generates the quote.
+
+![image of loading wheel](/assets/images/loader.jpg)
+
 The quotes are randomly generated from the [TypeFit API](https://type.fit/api/quotes).
 
 ![image of quote](/assets/images/quote.jpg)
