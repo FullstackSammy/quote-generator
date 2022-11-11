@@ -9,20 +9,20 @@ const loader = document.getElementById('loader');
 let apiQuotes = [];
 
 /** Shows the user that the page is loading */
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     quoteContainer.hidden = true;
 }
 
 /** Hides the loading wheel and dispays the quote when finished loading */
-function complete() {
+function RemoveLoadingSpinner() {
     quoteContainer.hidden = false;
     loader.hidden = true;
 }
 
 /** Picks a random quote from apiQuotes array and displays it in the browser*/
 function newQuote() {
-    loading();
+    showLoadingSpinner();
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
     // Check if Author field is blank and replace it with "Unknown"
     if (!quote.author) {
@@ -38,13 +38,13 @@ function newQuote() {
     }
     // Set Quote, hide loader
     quoteText.textContent = quote.text;
-    complete();
+    RemoveLoadingSpinner();
 }
 
 
 /** Gets Quotes From API */
 async function getQuotes() {
-    loading();
+    showLoadingSpinner();
     const apiUrl = 'https://type.fit/api/quotes';
     try {
         const response = await fetch(apiUrl);
