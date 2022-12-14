@@ -1,4 +1,4 @@
-# Quote Generator
+# Quote Generator | Javascript Side Project
 [Live site](https://fullstacksammy.github.io/quote-generator/)
 
 This site is a webiste for any quote nerd out there. It focuses on simple eye-friendly design and on giving random quotes to the user.
